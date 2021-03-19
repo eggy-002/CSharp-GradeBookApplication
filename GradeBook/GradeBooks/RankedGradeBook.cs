@@ -25,5 +25,21 @@ namespace GradeBook.GradeBooks
          else
             return 'F';
       }
+
+      public override void CalculateStatistics()
+      {
+         if (Students.Count < 5)
+         {
+            Console.WriteLine
+               ("Ranked grading requires at lease 5 students with grades in" +
+               "order to properly calculate a student's overall grade.");
+         }
+         else
+         {
+            base.CalculateStatistics();
+         }
+
+
+      }
    }
 }
